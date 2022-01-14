@@ -24,4 +24,6 @@ Now that you can run mkdocs, clone the repo
 using SSH `git@gitpgtcs.informatik.uni-osnabrueck.de:spanners/handbookwebsite.git`  
 or HTTPS `https://gitpgtcs.informatik.uni-osnabrueck.de/spanners/handbookwebsite.git`
 
-and run `mkdocs serve` to view a local version of the website, which will be automatically updated when you save your files (listening on `127.0.0.1:8000/`). 
+and run `mkdocs serve` to view a local version of the website, which will be automatically updated when you save your files (listening on `127.0.0.1:8000/`).
+
+You can only update the files and your local version of the website, only @blechtermann has been granted the permission to work on the real website, available at https://project2.informatik.uni-osnabrueck.de/spanners/.
