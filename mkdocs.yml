@@ -1,0 +1,47 @@
+site_name: S.P.A.N.N.E.R.S.-Plugin
+site_url: https://example.com/
+# site_favicon: favicon.ico # warning
+extra_css: [extra.css]
+
+theme:
+    favicon: img/favicon.png
+    name: readthedocs
+    palette:
+        primary: 'blue grey'
+        accent: 'deep orange'
+    prev_next_buttons_location: both
+    #navigation_depth: 3
+    sticky_navigation: False
+    #logo: img/bild.png #versuche für sidebar
+    #icon:
+    #    logo: img/bild.png
+
+
+nav:
+    - Home: 'index.md'
+    - 'Setup':
+        - 'Using Docker': 'docker.md'
+        - 'Using Git': 'git.md'
+    - 'Beginner''s Guide':
+        - 'User Interface': 'ui.md'
+        - 'Graph Builder': 'graphbuilder.md'
+        - 'Graph Layer': 'graphlayer.md' 
+    - 'Advanced Applications':
+        - 'Generating Your Own Handlers': 'handlers.md'
+        - 'Testing Your Results': 'testing.md'
+    - 'About the S.P.A.N.N.E.R.S.-Plugin':
+        - Licenses: 'licenses.md'
+        - About: 'about.md'
+        
+extra_javascript: 
+    - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+
+markdown_extensions:
+    - mdx_math
+    - attr_list
+
+plugins:
+    - mkdocs-video
+    - search
+    - print-site #bottom!
+    # - #page-to-pdf # should be last
