@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="canonical" href="https://example.com/testing/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Testing Your Results - S.P.A.N.N.E.R.S.-Plugin</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  <link href="../css/print-site.css" rel="stylesheet" />
+  <link href="../extra.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Testing Your Results";
+    var mkdocs_page_input_path = "testing.md";
+    var mkdocs_page_url = "/testing/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> S.P.A.N.N.E.R.S.-Plugin</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Setup</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../docker/">Using Docker</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../git/">Using Git</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Beginner's Guide</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ui/">User Interface</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../graphbuilder/">Graph Builder</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../graphlayer/">Graph Layer</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Advanced Applications</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../handlers/">Generating Your Own Handlers</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Testing Your Results</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">About the S.P.A.N.N.E.R.S.-Plugin</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../licenses/">Licenses</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../about/">About</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">S.P.A.N.N.E.R.S.-Plugin</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Advanced Applications &raquo;</li>
+        
+      
+    
+    <li>Testing Your Results</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+    <div class="rst-breadcrumbs-buttons" role="navigation" aria-label="breadcrumb navigation">
+        <a href="../licenses/" class="btn btn-neutral float-right" title="Licenses">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../handlers/" class="btn btn-neutral" title="Generating Your Own Handlers"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="testing-your-results">Testing Your Results</h1>
+<p>The Benchmark System is represented as a tab in the user interface and gives you the possibility to execute experiments using the graphs you created. Through
+multiple calls to the OGDF, you can compare an algorithm's performance on different graphs and compare several algorithms with each other. The system automatically does all the necessary calls and can also create plots, which can showcase the results. This is the UI of the system:</p>
+<p><center>
+    <a name="benchmarksystem">
+        <a href="https://project2.informatik.uni-osnabrueck.de/spanners/img/Benchmark_System.png" target="_blank"><img alt="Benchmark System" src="../img/Benchmark_System.png" /></a>
+    </a>
+</center></p>
+<p>In <span style="color:#e60000">area 1</span> you can select any number of graphs currently loaded in QGIS by double-clicking.<br />
+<span style="color:red">Area 2</span> shows all the selected graphs. You can remove graphs from this selection by double-clicking the graph in the list. If you want to choose all graphs at once, you can also press the <code>green arrow</code>.  In the two areas below you can make all the required selections concerning the OGDF algorithms.<br />
+All algorithms available are listed in <span style="color:#e60000">area 3</span> and can be selected directly.<br />
+<span style="color:#e60000">Area 4</span> automatically shows all the appropriate parameters for the algorithms.
+For every parameter, you can specify a range of values you wish to examine. Furthermore, it's possible to execute every graph with all of its cost functions. For every algorithm, you can define the number of executions, so you can have a look at the average and deviations of different executions with the same parameters.<br />
+<span style="color:#e60000">Area 5 and 6</span> regard the visualisation of the results. If you want to create different visualisations/benchmarks of the results, you can press the <code>+</code> button, which creates two additional areas below.<br />
+You can make three selections in <span style="color:#e60000">area 5</span>: First, two parameter selections have to be made.
+The first selection is in connection with the colour-coded categorisation of the data. This means the original data set will be divided into multiple independent data sets and for each set a legend entry is created and the second selection defines the structuring of the x-axis. 
+The third selection is the analysis, which defines the y-axis of the plot. Note that you can also make multiple selections for the parameters
+or no selection for the first parameter. Naturally, the selectable parameters change with the algorithms you selected in <span style="color:#e60000">area 3</span>.
+For example if you choose <code>Graph</code> and <code>Algorithm</code> for the first parameter selection, the resulting plot breaks down the results by graphs and algorithms. It shows a different colour for all the possible combinations of graphs and algorithms. Of course, it is possible that multiple values exist for one data point in the plot. In this case the system automatically calculates the average over all the values.
+The last thing you need to do is to define the type of plot you wish to create in <span style="color:#e60000">area 6</span>, but you can also choose to create multiple plots for the same data.
+In addition you can select some options regarding the design of the plot.</p>
+<p>At the bottom of the tab you can specify a path to a folder. If you check the <code>Create .csv file</code> checkbox, multiple csv-files will be created and put into this folder. One of these files contains all the executions and values associated with the calls and one file is created for every benchmark visualisation you created, containing all the concrete numbers of the plot.  The name of the file containing all information starts with
+<code>Complete\_Benchmark</code> and the filenames for the visualisations all start with <code>BenchmarkResult</code>. To differentiate the files, the file names end with the date and time of the creation.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../licenses/" class="btn btn-neutral float-right" title="Licenses">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../handlers/" class="btn btn-neutral" title="Generating Your Own Handlers"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../handlers/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../licenses/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js" defer></script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../js/print-site.js" defer></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(false);
+        };
+    </script>
+
+</body>
+</html>
