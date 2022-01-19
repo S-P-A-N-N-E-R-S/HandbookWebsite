@@ -79,7 +79,8 @@ Using a combination of mouse and keyboard inputs, the provided options are:
     - `Show/Hide Vertex IDs` will show or hide the IDs of the selected vertices. <!-- ich würde hier nochmal nachfragen ob das entweder immer hide heißt oder der Punkt "show/hide" heißen sollte, oder? Im Bild heißt es zumindest hide-->
     - `Delete Vertices` will delete all selected vertices.
     - `Delete Edges` will delete all edges attached to the selected vertices.
-    
+
+- __Hold `SHIFT` + right-click__ allows you select a rectangle as the new rendered extent. After releasing the right-click (still holding __`SHIFT`__), the canvas automatically renders only the selected rectangle.
     
 - __`Undo/Redo`__ buttons on the bottom of the _Graph layer window_ will keep track of all your executed edit operations on your graph. This includes adding/deleting vertices and edges, moving a vertex or setting new costs to an edge. This operations can be undone or redone by the respective buttons. Note that deleting a vertex with attached edges will lead to an undo operation containing not only the vertex but also all previous attached edges. The same applies to the deletion of multiple selected vertices or edges. After undoing an operation and then executing another one the operation which was undone previously will be lost.
     
