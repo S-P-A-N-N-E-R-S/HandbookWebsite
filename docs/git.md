@@ -38,7 +38,7 @@ The installation of the plugin under Ubuntu 20.04 (Focal Fossa) does not work, a
 First, if they are not already on your system, install these prerequisites for the following steps:
 
 - __`autoconf, automake, libtool, make, g++` and `unzip`:__ Install those by typing `sudo apt-get install autoconf automake libtool curl make g++ unzip` so you will be able to use protobuf.
-- __Python__ should be installed on your Linux by default, but if it isn't, type `sudo apt-get install python3` to install it. Make sure you really have access to Python __3__.
+- __Python__ should be installed on your Linux by default. If it isn't, type `sudo apt-get install python3` to install it. Make sure you really have access to Python __3__.
 
 Please follow the instrcutions below to install the frontend on Linux:
 
@@ -53,7 +53,7 @@ If you want, you can also see ![here](https://github.com/protocolbuffers/protobu
 __Alternative:__ Copy or clone the repository directly into the folder located at `/home/<user>/.local/share/QGIS/QGIS3/profiles/default/python/plugins`. After copying, you need to navigate to the root of the frontend directory and execute the commands `make proto`, `make transcompile` and `make pybind\_build`. The `pybind\_build` is optional, but recommended as it speeds up the shortest path raster analysis using compiled C++ binaries. This command needs a C++ compiler on your system.
 - Finally, the plugin needs to be enabled in QGIS: `Plugins -> Manage and Install Plugins...`
 
-Subsequently, you can [install the backend]((./git.md#install-backend)) or connect the frontend to an existing backend server.
+Subsequently, you can [install the backend](#install-backend) or connect the frontend to an existing backend server.
 
 
 ### Windows
@@ -73,7 +73,7 @@ __Note:__ The installation directory can differ on your system. If this is the c
 - Open Git Bash (or Cygwin) in the frontend directory and execute the following commands in the shell: 
     - `make transcompile`
     - `make proto`  
-__Note:__ make deploy does not work on windows, because the environment variable `HOME` in the Makefile is not set correctly in Git Bash (also in cygwin).
+__Note:__ `make deploy` does not work on windows, because the environment variable `HOME` in the Makefile is not set correctly in Git Bash (also in cygwin).
 - Copy the frontend directory to  
 `C:\Users\<User>\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins`.  
 __Note:__ The QGIS directory can differ on your system. Alternatively, you can manually zip the cloned frontend directory and install it as described above.
@@ -87,7 +87,7 @@ The backend contains a server and is needed to run algorithms on the graphs. It 
 The backend can be installed directly on a Linux system (see below) or the server can be [run in a Docker container](./docker.md), which automates and simplifies the complex installation of the system. The recommended way is to use Docker which __also supports Windows__.
 
 ### Linux
-The requirements and instructions below describe how to install the Backend locally on a Linux system.
+The requirements and instructions below describe how to install the backend locally on a Linux system.
 
 The system requires the following technologies:
 
@@ -107,7 +107,7 @@ The protobuf compiler used in the frontend installation can be used here as well
 - __asio__ To install the asio C++ library, you can type this command: `sudo apt-get install -y libasio-dev`
 - __OpenSSL dev library__ The OpenSSL development library can be installed with `sudo apt-get install libssl-dev`.
 
-Please follow the following instructions to manually install the backend server:
+Please stick to the following instructions to manually install the backend server:
 
 - Clone the repository with submodules: `git clone --recurse-submodules <backend-repository>`
 - Install pqxx library manually: 
@@ -118,7 +118,7 @@ Please follow the following instructions to manually install the backend server:
         - `make`
         - `sudo make install`
 - Setting up the database:
-    - To create a superuser, first open the postgresql shell: `sudo -u postgres psql`. Alternatively, use the _createuser_ command.
+    - To create a superuser, first open the postgresql shell: `sudo -u postgres psql`. Alternatively, use the `createuser` command.
     - Execute the following commands in the shell:
         - Create a user: `CREATE SUPERUSER spanner_user WITH PASSWORD pwd;`
         - Create a database: `CREATE DATABASE spanner_db;`

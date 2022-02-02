@@ -6,10 +6,11 @@ The backend Docker allows you to easily run the server in a Docker container wit
 
 The following steps show how to install and run the backend Docker:
 
-- Install Docker on your system, see [here](https://docs.docker.com/get-docker/)
-- __Optional:__ If you want to run Docker as non root user on Linux, see [here](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
+- [Install Docker](https://docs.docker.com/get-docker/) on your system
+- __Optional:__ You can [run Docker as non root user on Linux](https://docs.docker.com/engine/install/linux-postinstall/#manage-docker-as-a-non-root-user)
 - [Install Docker Compose](https://docs.docker.com/compose/install/) (already included in Docker Desktop)
-- Clone the backend Docker repository recursively: `git clone --recursive <backend-docker-repository>`
+- Clone the backend Docker repository recursively:  
+`git clone --recursive <backend-docker-repository>`
 - Run the postgres container: `sudo docker-compose up postgres`
 - Execute the database commands defined in the backend database file in a separate terminal to create all the tables needed:  
 `sudo docker-compose exec postgres psql spanner\_db spanner\_user -f /opt/backend/database/spanners\_tables.pgsql`
