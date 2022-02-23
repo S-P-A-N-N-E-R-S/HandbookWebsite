@@ -26,7 +26,9 @@ The .zip file can be installed in QGIS from the menu bar under
 	[![The ZIP-installation Window](img/ZIP-Installation.png)](https://project2.informatik.uni-osnabrueck.de/spanners/img/ZIP-Installation.png){:target="_blank"}
 </a>
 
-Probably, you need to install the Python packages via the OSGeo4W shell by navigating to the frontend directory with  
+Probably, you need to install the Python packages. On Linux the installation is simply done by running `python3 -m pip install -r requirements.txt` 
+in the frontend directory `/home/<user>/.local/share/QGIS/QGIS3/profiles/default/python/plugins/<plugin_name>`.
+On Windows you can install these packages via the OSGeo4W shell by navigating to the frontend directory with  
 `cd C:\Users\<User>\AppData\Roaming\QGIS\QGIS3\profiles\default\python\plugins\<plugin_name>` and executing `python3 -m pip install -r requirements.txt`.
 
 Subsequently, you can [install the backend](./git.md#install-backend) or connect the frontend to an existing backend server.
