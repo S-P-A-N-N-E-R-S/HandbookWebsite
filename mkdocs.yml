@@ -25,15 +25,16 @@ nav:
     - 'Beginner''s Guide':
         - 'User Interface': 'ui.md'
         - 'Graph Builder': 'graphbuilder.md'
-        - 'Graph Layer': 'graphlayer.md' 
+        - 'Graph Layer': 'graphlayer.md'
     - 'Advanced Applications':
+        - 'Using the Command-Line Interface': 'cli.md'
         - 'Generating Your Own Handlers': 'handlers.md'
         - 'Testing Your Results': 'testing.md'
     - 'About the S.P.A.N.N.E.R.S.-Plugin':
         - Licenses: 'licenses.md'
         - About: 'about.md'
-        
-extra_javascript: 
+
+extra_javascript:
     - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML
 
 markdown_extensions:
