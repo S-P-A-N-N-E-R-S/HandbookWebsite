@@ -16,7 +16,7 @@ spannersctl user { block <user> | delete <user> | list | info <user> }
 * info <user>            -- print detailed information about a single user.
 
 Users can be identified by their name or ID.  
-Example: `./spannersctl user info user_x`
+Example: `spannersctl user info user_x`
 
 **Job commands:**
 ```
@@ -28,7 +28,7 @@ spannersctl job { delete <job> | stop <job> | list | info <job> }
 * info <job>             -- print detailed information about a single job.
 
 Jobs can be identified by their ID.  
-Example: `./spannersctl job delete 123`
+Example: `spannersctl job delete 123`
 
 **Scheduler commands:**
 ```
@@ -41,7 +41,7 @@ spannersctl scheduler { time-limit | process-limit | resource-limit | sleep } [v
 
 If the optional argument is omitted, the current value of the selected option is fetched.
 If the optional argument is given, the argument will be set as the new value.
-Example: `./spannersctl scheduler time-limit 123`
+Example: `spannersctl scheduler time-limit 123`
 
 ## Notes ##
 
