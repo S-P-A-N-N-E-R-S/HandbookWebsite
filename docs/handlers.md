@@ -214,6 +214,7 @@ Finally, the result is packed into the ```handle_return``` struct and returned. 
                 new generic_response{&mst_graph_message, &mst_node_coords, &mst_weights, nullptr,
                                      nullptr, nullptr, nullptr, nullptr, nullptr, status_code::OK}},
             ogdf_time};
+}
 ```
 
 To appear in the OGDF plugin, the new handler must then be registered in the function ```init_handlers()``` in ```src/handling/register_handlers.cpp```:
