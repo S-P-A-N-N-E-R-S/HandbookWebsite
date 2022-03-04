@@ -11,6 +11,7 @@ server process is running. The application is called ```spannersctl```.
 spannersctl user { block <user> | delete <user> | list | info <user> }
 ```
 * block <user>           -- block the user from submitting any further requests.
+* unblock <user>         -- unblocks a blocked user
 * delete <user>          -- deletes the user and all associated jobs.
 * list                   -- list all users.
 * info <user>            -- print detailed information about a single user.
