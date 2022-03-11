@@ -69,7 +69,6 @@ On the _Parameters tab_ you can specify the analysis and the corresponding analy
 - __Berman Spanner:__ The Berman spanner analysis calculates a \(k\)-spanner with an approximation ratio of \(\mathcal{O}(n^{1/2}\log n)\) based on Berman et. al., 2013. The analysis takes a simple connected graph, the edge costs of the graph and a stretch factor \(\geq 1\) for the multiplicative distortion function as input.
 - __Convex Hull:__ This analysis determines the convex hull of the selected graph and delivers the convex hull as a graph.
 - __Dijkstra:__ The Dijkstra analysis performs Dijkstra's single source shortest path algorithm on the given graph. The analysis takes a graph with positive edge weights, the graph's edge costs and a start node as input. The resulting graph contains all shortest paths starting from the start node.
-- __Todo:__ Add new ones ...
 
 
 ### Benchmarks Tab
