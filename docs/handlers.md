@@ -25,7 +25,7 @@ The general steps needed to build a generic handler are the following:
 The first step in building a handler is to create matching C++ files. Those are a header (```.hpp```) and, if needed, a source file (```.cpp```). By default, handler files can be found in ```include/handling/handlers``` and ```src/handling/handlers```. To add the files to the compilation unit, they must be added to their respective lists ```SERVER_HEADER``` and ```SERVER_SOURCES``` in ```src/CMakeLists.txt```.
 
 ### Creating a Class and Inheritance
-<!--purely statt pure??-->
+
 During runtime, handlers are objects which are created separately for each request. Every handler is implemented as a class and such a handler class must inherit from the pure virtual class ```abstract_handler.hpp```.
 
 ### Implement ```name()```
@@ -47,7 +47,7 @@ Every information that is needed to process a request (including the graph itsel
 |```VERTEX_COORDINATES```| Activates vertex coordinates|
 
 
-The third argument given to ```addFieldInformation()``` is the name of the field displayed in the frontend, the fourth is the unique internal key of the field. Keys for single attributes (which are all those in the two rows of the table above) need the specific prefix ```graphAttributes.*```.
+The third argument given to ```addFieldInformation()``` is the name of the field displayed in the frontend, the fourth is the unique internal key of the field. Keys for single attributes (which are all those in the uppermost two rows of the table above) need the specific prefix ```graphAttributes.*```.
 
 The last argument of ```addFieldInformation()``` indicates whether this field is required or optional for a request. If omitted, the field is optional by default.
 
@@ -83,13 +83,18 @@ This section will describe how to add a simple handler for Kruskal's minimum spa
 The first step is to create ```include/handling/handlers/kruskal_handler.hpp``` and  
 ```src/handling/handlers/kruskal_handler.cpp``` and add them to ```src/CMakeLists.txt```:
 
+
     set(SERVER_HEADERS
+        ...
         ${CMAKE_SOURCE_DIR}/include/handling/handlers/kruskal_handler.hpp
-    
-...
+        ...
+    )
     
     set(SERVER_SOURCES
+        ...
         handling/handlers/kruskal_handler.cpp
+        ...
+    )
 
 Next, we declare the class ```kruskal_handler``` in ```include/handling/handlers/kruskal_handler.hpp``` as follows:
 
@@ -228,18 +233,12 @@ void init_handlers()
     }
     initialized = true;
 
-    // ##### default handler registers   #####
-
     register_handler<dijkstra_handler>();
 
     register_handler<general_spanner_handler<ogdf::SpannerBerman<double>>>("spanner");
     register_handler<general_spanner_handler<ogdf::SpannerBasicGreedy<double>>>("spanner");
 
     register_handler<kruskal_handler>("Minimum Spanning Trees"); // <------ Our new handler
-
-    // #####   register your own handlers below  #####
-
-    // #####   end of handler registering   #####
 }
 ```
 
