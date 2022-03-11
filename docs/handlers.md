@@ -30,7 +30,7 @@ During runtime, handlers are objects which are created separately for each reque
 
 ### Implement ```name()```
 
-A function with the signature ```static std::string name()``` must be implemented. This function should output a unique name for the handler. This will be the name shown to the user in the frontend. As explained [later](#register-the-handler), it is discouraged to use ```/``` as a character in this name.
+A function with the signature ```static std::string name()``` must be implemented. It should output a unique name for the handler. This will be the name shown to the user in the frontend. As explained [later](#register-the-handler), it is discouraged to use ```/``` as a character in this name.
 
 ### Implement ```handler_information()```
 
@@ -40,12 +40,11 @@ Every information that is needed to process a request (including the graph itsel
 
 |Type   |Description  |
 | ------------ | ------------- |
-| ```BOOL```, ```DOUBLE```, ```CHOICE```, ```INT```, ```LITERAL```, ```STRING```   | Sets a single entry of the type. |
-|```EDGE_ID```, ```VERTEX_ID``` | Sets a single entry which must be an edge <br /> or node index.|
-| ```GRAPH```| Activates the graph entry.|
+| ```BOOL```, ```DOUBLE```, ```CHOICE```, ```INT```, ```LITERAL```, ```STRING```   | Sets a single entry of the type |
+|```EDGE_ID```, ```VERTEX_ID``` | Sets a single entry which must be an edge <br /> or node index|
+| ```GRAPH```| Activates the graph entry|
 |```EDGE_COST```, ```VERTEX_COST``` | Sets a weight for each edge or node |
-<!--|```EDGE_ID_ARRAY```, ```VERTEX_ID_ARRAY```|Sets an array of edge or node indices.|  Not implemented, therefore commented out-->
-|```VERTEX_COORDINATES```|Activates vertex coordinates.|
+|```VERTEX_COORDINATES```| Activates vertex coordinates|
 
 
 The third argument given to ```addFieldInformation()``` is the name of the field displayed in the frontend, the fourth is the unique internal key of the field. Keys for single attributes (which are all those in the two rows of the table above) need the specific prefix ```graphAttributes.*```.
@@ -64,14 +63,14 @@ The function ```handle_return handle()``` is called by the server to process the
 
 The request consists of a ```graph_message```, which stores the structural information of the graph and of the fields previously set with ```handler_information()```. The ```graph_message``` object is immutable and allows access to the graph and gives an index-based view on this graph. The fields in the ```generic_request``` are accessed through member functions. Some attributes like node coordinates or weights have specialized functions to allow direct access, others must be accessed through attribute maps. A more in-depth list of access functions is provided via the code documentation.
 
-The type ```handle_return``` is a struct. It consists of three components, but only the first two need to be filled by ```handle()```: First, the response in the form of a ```std::unique_ptr<abstract_response>``` and, second, a ```long``` integer. This integer should represent the time in microseconds the graph algorithm itself needed. The ```std::unique_ptr<abstract_response>``` wraps around a ```generic_response *```. A ```generic_response``` follows the same logic as a ```generic_request```, it contains a ```graph_message``` and attributes as arrays and maps.
+The type ```handle_return``` is a struct. It consists of three components, but only the first two need to be filled by ```handle()```: first, the response in the form of a ```std::unique_ptr<abstract_response>``` and second, a ```long``` integer. This integer should represent the time in microseconds the graph algorithm itself needed. The ```std::unique_ptr<abstract_response>``` wraps around a ```generic_response *```. A ```generic_response``` follows the same logic as a ```generic_request```, it contains a ```graph_message``` and attributes as arrays and maps.
 
 
 ### Register the Handler
 
 A handler first needs to be registered so that the server is able to recognize it. This is done in the file ```src/handling/register_handlers.cpp```. Here, the header of the handler file must be included and the class must be registered in the function ```init_handlers()```. For this, the function ```register_handler()``` is called with the handler class as template argument.
 
-One optional string can be given to ```register_handler()``` as argument. This string is interpreted as a directory structure, where every ```/``` signals a new subdirectory. In this way, handlers can be sorted in categories to be displayed in the frontend. This also applies to every ```/``` set in the ```name()``` function.
+One optional string can be given to ```register_handler()``` as argument. This string is interpreted as a directory structure, where every ```/``` signals a new subdirectory. In this way, handlers can be sorted into categories to be displayed in the frontend. This also applies to every ```/``` set in the ```name()``` function.
 
 ### Recompile the Server
 
@@ -81,7 +80,8 @@ Lastly, for the new handler to be active, the server must be recompiled and rest
 
 This section will describe how to add a simple handler for Kruskal's minimum spanning tree algorithm.
 
-The first step is to create ```include/handling/handlers/kruskal_handler.hpp``` and ```src/handling/handlers/kruskal_handler.cpp``` and add them to ```src/CMakeLists.txt```:
+The first step is to create ```include/handling/handlers/kruskal_handler.hpp``` and  
+```src/handling/handlers/kruskal_handler.cpp``` and add them to ```src/CMakeLists.txt```:
 <!-- nochmal überlegen, ob man das im Codeblock oder in einem Bild einfügt-->
 
     set(SERVER_HEADERS
