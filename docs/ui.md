@@ -1,6 +1,6 @@
 # User Interface
 
-The user interface consists of different windows that provide various functions, such as creating or editing graphs. All functions of the plugin are available through the user interface. 
+The user interface consists of different windows that provide various functions, such as creating or editing graphs. All functions of the plugin are available through the user interface.
 
 The section [Open Plugin Main Window](#open-plugin-main-window) shows how to open the main window of the plugin and the window of the graph layer. After you know how to open the windows, the components of the main window will be presented in the section [Plugin Window Overview](#plugin-window-overview). For more information on the graph layer, see the chapter on [graph layers](graphlayer.md).
 
@@ -18,7 +18,7 @@ In the menu bar, the window can be opened under ``` Plugins -> OGDF Plugin ```. 
 ### Plugin Toolbar
 Another possibility to open the window is through the _plugin toolbar_ by clicking on the plugin logo or on the arrow next to the logo to directly open a selected tab.
 
-Both options are highlighted in the image below:
+Both options are highlighted in red in the image below:
 
 <a name="openpluginwindow">
     [![Options to open the main window are highlighted in red](img/open_plugin_window.png)](https://project2.informatik.uni-osnabrueck.de/spanners/img/open_plugin_window.png){:target="_blank"}
@@ -65,11 +65,10 @@ After you have created a graph, you can send it to the OGDF server for analysis 
 On the _Parameters tab_ you can specify the analysis and the corresponding analysis parameters. The _Log tab_ provides logging information. After clicking the `Run job` button, your data will be sent to the server, where the analysis will be performed. As explained in the chapter on [generating your own handlers](handlers.md), analyses can be added. The following analyses are provided by default:
 
 <!--Zitation???-->
-- __Greedy Spanner:__ The greedy spanner analysis calculates a \((2k-1)\)-spanner of a given graph using the basic greedy \((2k-1)\)-spanner algorithm by Althöfer et al., 2007. The multiplicative spanner is constructed by greedily adding edges. The algorithm takes an undirected weighted graph, its edge costs and a stretch factor \(\geq 1\) for the multiplicative distortion function as input.  
-- __Berman Spanner:__ The Berman spanner analysis calculates a \(k\)-spanner with an approximation ratio of \(\mathcal{O}(n^{1/2}\log n)\) based on Berman et. al., 2013. The analysis takes a simple connected graph, the edge costs of the graph and a stretch factor \(\geq 1\) for the multiplicative distortion function as input.  
-- __Convex Hull:__ This analysis determines the convex hull of the selected graph and delivers the convex hull as a graph.  
-- __Dijkstra:__ The Dijkstra analysis performs Dijkstra's single source shortest path algorithm on the given graph. The analysis takes a graph with positive edge weights, the graph's edge costs and a start node as input. The resulting graph contains all shortest paths starting from the start node.  
-- __Todo:__ Add new ones ...
+- __Greedy Spanner:__ The greedy spanner analysis calculates a \((2k-1)\)-spanner of a given graph using the basic greedy \((2k-1)\)-spanner algorithm by Althöfer et al., 2007. The multiplicative spanner is constructed by greedily adding edges. The algorithm takes an undirected weighted graph, its edge costs and a stretch factor \(\geq 1\) for the multiplicative distortion function as input.
+- __Berman Spanner:__ The Berman spanner analysis calculates a \(k\)-spanner with an approximation ratio of \(\mathcal{O}(n^{1/2}\log n)\) based on Berman et. al., 2013. The analysis takes a simple connected graph, the edge costs of the graph and a stretch factor \(\geq 1\) for the multiplicative distortion function as input.
+- __Convex Hull:__ This analysis determines the convex hull of the selected graph and delivers the convex hull as a graph.
+- __Dijkstra:__ The Dijkstra analysis performs Dijkstra's single source shortest path algorithm on the given graph. The analysis takes a graph with positive edge weights, the graph's edge costs and a start node as input. The resulting graph contains all shortest paths starting from the start node.
 
 
 ### Benchmarks Tab
@@ -90,8 +89,7 @@ The _Options tab_ is shown below and allows to specify general settings for the 
 </center>
 
 
-- __Host:__ Specifies the host address of the server. The default value is `localhost`  
-- __Port:__ Contains the port number of the server. The default number is `4711`.  
-- __Username:__ The username is used to identify yourself to the server.  
+- __Host:__ Specifies the host address of the server. The default value is `localhost`
+- __Port:__ Contains the port number of the server. The default number is `4711`.
+- __Username:__ The username is used to identify yourself to the server.
 - __Password:__ The password to access the server.
-
