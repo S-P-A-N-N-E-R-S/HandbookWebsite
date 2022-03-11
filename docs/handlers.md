@@ -82,7 +82,6 @@ This section will describe how to add a simple handler for Kruskal's minimum spa
 
 The first step is to create ```include/handling/handlers/kruskal_handler.hpp``` and  
 ```src/handling/handlers/kruskal_handler.cpp``` and add them to ```src/CMakeLists.txt```:
-<!-- nochmal überlegen, ob man das im Codeblock oder in einem Bild einfügt-->
 
     set(SERVER_HEADERS
         ${CMAKE_SOURCE_DIR}/include/handling/handlers/kruskal_handler.hpp
