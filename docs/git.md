@@ -23,7 +23,7 @@ The .zip file can be installed in QGIS from the menu bar under
 `Plugin -> Manage and Install Plugins... -> Install from ZIP`. This is what the window looks like:
 
 <a name = "createGraph">
-	[![The ZIP-installation Window](img/ZIP-Installation.png)](https://project2.informatik.uni-osnabrueck.de/spanners/img/ZIP-Installation.png){:target="_blank"}
+	[![The ZIP-installation Window](img/ZIP-Installation.png)](img/ZIP-Installation.png){:target="_blank"}
 </a>
 
 Probably, you need to install the Python packages. On Linux the installation is simply done by running `python3 -m pip install -r requirements.txt` 
