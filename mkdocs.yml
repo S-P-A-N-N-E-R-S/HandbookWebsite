@@ -27,6 +27,7 @@ nav:
         - 'Graph Builder': 'graphbuilder.md'
         - 'Graph Layer': 'graphlayer.md'
     - 'Advanced Applications':
+        - 'Configuring the Backend': 'backend_config.md'
         - 'Using the Command-Line Interface': 'cli.md'
         - 'Generating Your Own Handlers': 'handlers.md'
         - 'Testing Your Results': 'testing.md'
