@@ -1,6 +1,6 @@
 # Using Docker
 
-With this installation guide, you can use our Docker image instead of [manually installing the backend](./git.md#install-backend). If you want to use the frontend, you will have to [install it manually](./git.md#install-frontend).
+With this installation guide, you can use our Docker image instead of [manually installing the backend](./git.md#install-backend). If you want to use the frontend, you will have to follow the [installation instructions](./git.md#install-frontend).
 
 The backend Docker allows you to easily run the server in a Docker container without needing to install the required technologies and to configure a database on your system.
 
