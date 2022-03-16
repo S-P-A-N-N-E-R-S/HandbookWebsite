@@ -32,7 +32,6 @@ nav:
         - 'Generating Your Own Handlers': 'handlers.md'
         - 'Testing Your Results': 'testing.md'
     - 'About the S.P.A.N.N.E.R.S.-Plugin':
-        - Licenses: 'licenses.md'
         - About: 'about.md'
 
 extra_javascript:
@@ -42,7 +41,7 @@ markdown_extensions:
     - mdx_math
     - attr_list
 
-copyright: Copyright &copy; 2022-now. Last updated on Mar 11, 2022 11:03 
+copyright: Copyright &copy; 2022-now. Last updated on Mar 16, 2022 16:35 
 
 plugins:
     - mkdocs-video
