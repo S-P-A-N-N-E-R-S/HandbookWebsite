@@ -1,3 +1,0 @@
-# Licences
-
-Work In Progress
