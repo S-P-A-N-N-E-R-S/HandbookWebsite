@@ -8,7 +8,7 @@ server process is running. The application is called ```spannersctl```.
 
 **User commands:**
 ```
-spannersctl user { block <user> | delete <user> | list | info <user> }
+spannersctl user { block <user> | unblock <user> | delete <user> | list | info <user> }
 ```
 * `block <user>` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          Block the user from submitting any further requests
 * `unblock <user>`&nbsp;&nbsp;&nbsp;         Unblock a blocked user
