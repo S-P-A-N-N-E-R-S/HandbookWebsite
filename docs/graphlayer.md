@@ -27,11 +27,15 @@ Depending on the density of your graph, a lot of edges may be overlapping and ev
 #### Toggle Edge Text
 If the graph's edges are visible, this button toggles the visibility of the attached edge costs.
 
+Similar behaviour is implemented for vertices, but no costs can be set as of yet.
+
 #### Toggle Direction
 If the graph's edges are visible, this button toggles the visibility of the edge directions. Represented by red arrow heads, the edge direction can be of help for the graph editing described in the [next section](#graph-editing).
 
 #### Choose Cost Function
 As shown in the section regarding [advanced distances](./graphbuilder.md#advanced-distance-strategy), you can add multiple _advanced costs_ to your graph and its edges. As mentioned before, only one edge text and therefore only one edge cost is visually attached to a line in the rendered layer. To select a specific edge cost to be shown on the canvas, you can select the corresponding cost function index with the number field in the _Graph layer window_. Note that, in contrast to the toggle buttons, after selecting a cost function index, the canvas will not update itself. By using one of the already explained buttons or slightly moving the canvas you can update the graph layer and see the correct edge costs. On the other hand, if pressed, the `Next` button will set the cost function automatically to the next available one.
+
+Similar behaviour is implemented for vertices, but no costs can be set as of yet.
 
 #### Random Vertex Color
 Each time a graph is rendered, a new random vertex color will be chosen. To make sure a highly visible color is chosen or to distinguish several rendered graphs from each other, this button randomizes the vertex color.
@@ -42,7 +46,7 @@ After creating and checking the graph for correctness, you can edit your graph w
 ### Edit Operations
 Using a combination of mouse and keyboard inputs, the provided options are:
 
-- __Right-click__ on a vertex to select it. If clicked on, a selected vertex will be marked with a red cross. To deselect the vertex again, right-click somewhere else on the canvas NOT hitting another vertex.
+- __Right-click__ to select a vertex closest to the clicked position. A selected vertex will be marked with a red cross. To deselect the vertex again, press `R`.
 
 - __Right-click a second vertex__ first checks if an edge exists from your first selected vertex to the second selected vertex. If such an edge exist, an edge window (see below) will be opened, giving you more information on the selected edge and allowing you to modify it further.
 
@@ -61,7 +65,7 @@ Using a combination of mouse and keyboard inputs, the provided options are:
 
 - __`CTRL` + right-click__ on a selected vertex will delete this vertex with all its attached edges.
 
-- __left-click__ will add a new vertex to the graph on the clicked position.
+- __Left-click__ will add a new vertex to the graph on the clicked position.
 
 - __Selected vertex + left-click__ will move the selected vertex to the clicked position instead of creating a new one. Note that the edge costs are calculated dynamically. That means moving a vertex to a different position will change the edge costs of its incident edges. Also note that this option is disabled for _advanced edge costs_ as they cannot be calculated dynamically.
 
