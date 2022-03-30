@@ -53,7 +53,7 @@ The _Create graph tab_ shown below allows to create graphs from one input layer 
     [![Cost Function Widget](img/Plugin_CreateGraph.png)](https://project2.informatik.uni-osnabrueck.de/spanners/img/Plugin_CreateGraph.png){:target="_blank"}
 </a>
 
-The contents of the tab are split into different tabs that provide various functions. The _Parameters tab_ contains all the input fields for creating a graph, which is created after clicking the `Create` button. The _Graph Tasks tab_ displays a table that lists information about all running and completed graph creation processes and allows to cancel a process. Also, it is possible to create at most three graphs simultaneously in the background by clicking the `create graph`<!--nachschauen--> button several times. The _Log tab_ outputs logging information in a text browser.
+The contents of the tab are split into different tabs that provide various functions. The _Parameters tab_ contains all the input fields for creating a graph, which is created after clicking the `Create` button. The _Graph Tasks tab_ displays a table that lists information about all running and completed graph creation processes and allows to cancel a process. Also, it is possible to create at most three graphs simultaneously in the background by clicking the `Create` button several times. The _Log tab_ outputs logging information in a text browser.
 
 ### OGDF Analysis Tab
 After you have created a graph, you can send it to the OGDF server for analysis in the _OGDF analysis tab_ and fetch the result of the analysis in the _OGDF jobs tab_. As you can see below, the view has two tabs.
@@ -62,27 +62,31 @@ After you have created a graph, you can send it to the OGDF server for analysis 
     [![Analysis Tab](img/main_window_analysis.png)](https://project2.informatik.uni-osnabrueck.de/spanners/img/main_window_analysis.png){:target="_blank"}
 </a>
 
-On the _Parameters tab_ you can specify the analysis and the corresponding analysis parameters. The _Log tab_ provides logging information. After clicking the `Run job` button, your data will be sent to the server, where the analysis will be performed. As explained in the chapter on [generating your own handlers](handlers.md), analyses can be added. The following analyses are provided by default:
+On the _Parameters tab_ you can specify the analysis and the corresponding analysis parameters. The _Log tab_ provides logging information. After clicking the `Run job` button, your data will be sent to the server, where the analysis will be performed. As explained in the chapter on [generating your own handlers](handlers.md), analyses can be added. This tab provides several analyses by default. The analysis categories and some important analyses are described below:
 
 <!--Zitation???-->
+- __Spanner:__ The spanner category includes spanner algorithms that preserve the distances of all nodes in the graph up to a certain additive or multiplicative factor. The factor is typically called stretch factor. The provided algorithms guarantee different spanner characteristic like fault-tolerance, minimum cost and roundtrip.
+- __Geospanner:__ The geospanner category comprises spanner algorithms that leverage the characteristics of the metric space to increase the calculation speed. Geospanner algorithms can be seen as a special case of spanner algorithms. These algorithms only use the nodes of the graph and imply a complete graph due to the metric space.
+- __Utils__: The utils category contains analyses for calculating specific graph characteristics, such as the fragility or the girth of a graph.
 - __Greedy Spanner:__ The greedy spanner analysis calculates a \((2k-1)\)-spanner of a given graph using the basic greedy \((2k-1)\)-spanner algorithm by Althöfer et al., 2007. The multiplicative spanner is constructed by greedily adding edges. The algorithm takes an undirected weighted graph, its edge costs and a stretch factor \(\geq 1\) for the multiplicative distortion function as input.
 - __Berman Spanner:__ The Berman spanner analysis calculates a \(k\)-spanner with an approximation ratio of \(\mathcal{O}(n^{1/2}\log n)\) based on Berman et. al., 2013. The analysis takes a simple connected graph, the edge costs of the graph and a stretch factor \(\geq 1\) for the multiplicative distortion function as input.
-- __Convex Hull:__ This analysis determines the convex hull of the selected graph and delivers the convex hull as a graph.
 - __Dijkstra:__ The Dijkstra analysis performs Dijkstra's single source shortest path algorithm on the given graph. The analysis takes a graph with positive edge weights, the graph's edge costs and a start node as input. The resulting graph contains all shortest paths starting from the start node.
+- __Kruskal's Algorithm:__ This analysis uses Kruskal's algorithm to find the minimum spanning tree of a given graph.
+- __Simplification:__ The simplification analysis simplifies a given graph by removing degree two nodes and adding an edge between their two adjacent nodes.
 
 
 ### Benchmarks Tab
 The Benchmark System gives you the possibility to execute experiments using the graphs you created. For more details, see the [Testing Your Results chapter](testing.md).
 
 ### OGDF Jobs Tab
-As mentioned above, in the _OGDF jobs tab_ you can view the status of your running jobs and fetch the results of your successfully completed jobs from the server. In addition, you can cancel jobs, restart them and fetch the original graph of the analysis from the server. The tab is displayed below:
+As mentioned above, in the _OGDF jobs tab_ you can view the status of your running jobs and fetch the results of your successfully completed jobs from the server. In addition, you can abort jobs, delete them and fetch the original graph of the analysis from the server. The tab is displayed below:
 
 <center>
     [![Main Window Jobs](img/main_window_jobs.png)](https://project2.informatik.uni-osnabrueck.de/spanners/img/main_window_jobs.png){:target="_blank"}
 </center>
 
 ### Options tab
-The _Options tab_ is shown below and allows to specify general settings for the plugin. You can specify server settings, like host or port and authentication settings, like username or password. After confirming the `Save` button, the settings will be persistently saved in QGIS. The following server settings can be set:
+The _Options tab_ is shown below and allows you to specify general settings for the plugin. You can specify server settings, like host or port and authentication settings. In the authentication settings, you can create a new user on the server or log in to the server by specifying a username and a password. After confirming the `Save` button, the settings will be persistently saved in QGIS. The following server settings can be set:
 
 <center>
     [![Main Window Jobs](img/main_window_options.png)](https://project2.informatik.uni-osnabrueck.de/spanners/img/main_window_options.png){:target="blank"}
