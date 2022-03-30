@@ -16,13 +16,18 @@ All algorithms available are listed in <span style="color:#e60000">area 3</span>
 For every parameter, you can specify a range of values you wish to examine. Furthermore, it's possible to execute every graph with all of its cost functions. For every algorithm, you can define the number of executions, so you can have a look at the average and deviations of different executions with the same parameters.  
 <span style="color:#e60000">Area 5 and 6</span> regard the visualisation of the results. If you want to create different visualisations/benchmarks of the results, you can press the `+` button, which creates two additional areas below.  
 You can make three selections in <span style="color:#e60000">area 5</span>: First, two parameter selections have to be made.
-The first selection is in connection with the colour-coded categorisation of the data. This means the original data set will be divided into multiple independent data sets and for each set a legend entry is created and the second selection defines the structuring of the x-axis. 
+The first selection is in connection with the colour-coded categorisation of the data. This means the original data set will be divided into multiple independent data sets and for each set a legend entry is created. The second parameter selection defines the structuring of the x-axis and can be set in the 
+`x-axis Cat` tab.
 The third selection is the analysis, which defines the y-axis of the plot. Note that you can also make multiple selections for the parameters
 or no selection for the first parameter. Naturally, the selectable parameters change with the algorithms you selected in <span style="color:#e60000">area 3</span>.
 For example if you choose `Graph` and `Algorithm` for the first parameter selection, the resulting plot breaks down the results by graphs and algorithms. It shows a different colour for all the possible combinations of graphs and algorithms. Of course, it is possible that multiple values exist for one data point in the plot. In this case the system automatically calculates the average over all the values.
 The last thing you need to do is to define the type of plot you wish to create in <span style="color:#e60000">area 6</span>, but you can also choose to create multiple plots for the same data.
-In addition you can select some options regarding the design of the plot.
-For more computationally intensive analyses and categorization options, a call to the OGDF is performed automatically.
+In addition, you can select some options regarding the design of the plot.
+For more computationally intensive analyses and categorization options, a call to the OGDF is performed automatically. Most of the analyses types are self-explanatory. The following three types are special:
+
+- The sparseness is defined as the number of edges of the result graph divided by the number of edges of the original graph.
+- The lightness is the total weight of the result graph divided by the total weight of the minimum spanning tree.
+- The fragility is the maximum relative increase in distance between any two vertices when any edge is removed from the graph. You can choose between the minumum, maximum or average value since the fragility is calulated independently for every edge.
 
 At the bottom of the tab you can specify a path to a folder. If you check the `Create .csv file` checkbox, multiple csv-files will be created and put into this folder. One of these files contains all the executions and values associated with the calls and one file is created for every benchmark visualisation you created, containing all the concrete numbers of the plot.  The name of the file containing all information starts with
 `Complete\_Benchmark` and the filenames for the visualisations all start with `BenchmarkResult`. To differentiate the files, the file names end with the date and time of the creation.
