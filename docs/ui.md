@@ -64,7 +64,6 @@ After you have created a graph, you can send it to the OGDF server for analysis 
 
 On the _Parameters tab_ you can specify the analysis and the corresponding analysis parameters. The _Log tab_ provides logging information. After clicking the `Run job` button, your data will be sent to the server, where the analysis will be performed. As explained in the chapter on [generating your own handlers](handlers.md), analyses can be added. This tab provides several analyses by default. The analysis categories and some important analyses are described below:
 
-<!--Zitation???-->
 - __Spanner:__ The spanner category includes spanner algorithms that preserve the distances of all nodes in the graph up to a certain additive or multiplicative factor. The factor is typically called stretch factor. The provided algorithms guarantee different spanner characteristic like fault-tolerance, minimum cost and roundtrip.
 - __Geospanner:__ The geospanner category comprises spanner algorithms that leverage the characteristics of the metric space to increase the calculation speed. Geospanner algorithms can be seen as a special case of spanner algorithms. These algorithms only use the nodes of the graph and imply a complete graph due to the metric space.
 - __Utils__: The utils category contains analyses for calculating specific graph characteristics, such as the fragility or the girth of a graph.

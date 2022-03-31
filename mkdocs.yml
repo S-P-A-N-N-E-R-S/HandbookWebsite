@@ -41,7 +41,7 @@ markdown_extensions:
     - mdx_math
     - attr_list
 
-copyright: Copyright &copy; 2022-now. Last updated on Mar 16, 2022 16:35 
+copyright: Copyright &copy; 2022-now. Last updated on Mar 31, 2022 07:40
 
 plugins:
     - mkdocs-video
