@@ -215,3 +215,6 @@ As a workaround you can use ```0-euclidean```.
 To make it easier for you to specify the formula, a check is performed constantly as you type in your cost function. You can see the result of this syntax check below the text field for the cost function in the _Cost Function Window_. Additionally to a brief description of the problem, the part where the problem is located is highlighted as well. 
 
 Unfortunately, the coverage of this syntax check is not at 100 percent, so there are some cases where the syntax check is not able to recognise the mistake in the formula. This problem occurs mainly with simple typing errors, which should always be easy to correct if the graph creation process should fail/terminate.
+
+## Graph Collection
+A collection of different directed and undirected graphs is available on our Github page under `resources/Graph_Collection/`. The graphs in this collection are stored as a `.graphml` file and can be used as examples which have been created with our plugin.
